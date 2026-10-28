@@ -15,6 +15,27 @@ st.set_page_config(
     page_icon="icon.png"
 )
 
+# Inyección de soporte PWA (Manifest, Meta tags para iOS/Android y Service Worker)
+pwa_header_html = """
+<link rel="manifest" href="/app/static/manifest.json">
+<meta name="theme-color" content="#1a9641">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AgroSpectra">
+<link rel="apple-touch-icon" href="/app/static/icon-192.png">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/app/static/sw.js')
+        .then(reg => console.log('[AgroSpectra PWA] Service Worker registrado:', reg.scope))
+        .catch(err => console.log('[AgroSpectra PWA] Fallo Service Worker:', err));
+    });
+  }
+</script>
+"""
+st.markdown(pwa_header_html, unsafe_allow_html=True)
+
 # Estilo visual moderno y limpio
 st.markdown(
     """
