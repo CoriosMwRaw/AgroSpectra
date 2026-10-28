@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Predio Los Encinos (Demo)",
+        "cultivo": "Agave Tequilana Weber",
+        "municipio": "Arandas, Jalisco",
+        "superficie_ha": 3.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-102.3040, 20.7035],
+            [-102.3000, 20.7040],
+            [-102.2995, 20.7065],
+            [-102.3038, 20.7060],
+            [-102.3040, 20.7035]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Predio La Herradura (Demo)",
+        "cultivo": "Maíz de Temporal",
+        "municipio": "Arandas, Jalisco",
+        "superficie_ha": 5.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-102.3420, 20.7180],
+            [-102.3375, 20.7185],
+            [-102.3380, 20.7220],
+            [-102.3425, 20.7215],
+            [-102.3420, 20.7180]
+          ]
+        ]
+      }
+    }
+  ]
+}

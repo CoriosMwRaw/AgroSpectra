@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Google Earth Engine credentials locales
+credentials
+.config/
+
+# Windows
+desktop.ini
+Thumbs.db
